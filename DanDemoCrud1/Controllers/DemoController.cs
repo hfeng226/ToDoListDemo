@@ -11,6 +11,13 @@ namespace DanDemoCrud1.Controllers
     [RoutePrefix("api/demo")]
     public class DemoController : ApiController
     {
+        readonly IDemoDataService demoDataService;
+
+        public DemoController(IDemoDataService demoDataService)
+        {
+            this.demoDataService = demoDataService;
+        }
+
         [Route("message"), HttpGet]
         public object GetMessage()
         {

@@ -8,7 +8,7 @@ using System.Web;
 
 namespace DanDemoCrud1.Services
 {
-    public class DemoDataService
+    public class DemoDataService : IDemoDataService
     {
         public List<DemoMessage> GetAllMessages()
         {
