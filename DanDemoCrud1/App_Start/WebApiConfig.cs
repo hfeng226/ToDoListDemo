@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.Http.Headers;
 using System.Web.Http;
 
 namespace DanDemoCrud1
@@ -10,6 +11,12 @@ namespace DanDemoCrud1
         public static void Register(HttpConfiguration config)
         {
             // Web API configuration and services
+
+            //We remove the xml serilizer to make life easier. 
+            MediaTypeHeaderValue appXmlType = config.Formatters.XmlFormatter.SupportedMediaTypes.FirstOrDefault(t => t.MediaType == "application/xml");
+            config.Formatters.XmlFormatter.SupportedMediaTypes.Remove(appXmlType);
+
+            var json = GlobalConfiguration.Configuration.Formatters.JsonFormatter;
 
             // Web API routes
             config.MapHttpAttributeRoutes();
