@@ -142,6 +142,8 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\DemoMessage.cs" />
+    <Compile Include="Models\InsertMessages.cs" />
+    <Compile Include="Models\UpdateMessages.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\DemoDataService.cs" />
     <Compile Include="Services\IDemoDataService.cs" />

@@ -1,4 +1,5 @@
-﻿using DanDemoCrud1.Services;
+﻿using DanDemoCrud1.Models;
+using DanDemoCrud1.Services;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -22,6 +23,22 @@ namespace DanDemoCrud1.Controllers
         public object GetMessage()
         {
             return new DemoDataService().GetAllMessages();
+        }
+
+        [Route, HttpPost]
+        public int InsertMessages(InsertMessages model)
+        {
+            return new DemoDataService().InsertMessages(model);
+        }
+        [Route, HttpPut]
+        public void UpdateMessages(UpdateMessages model)
+        {
+            new DemoDataService().UpdateMessages(model);
+        }
+        [Route("{Id:int}"), HttpDelete]
+        public void DeleteMessages(int Id)
+        {
+            new DemoDataService().Delete(Id);
         }
     }
 }

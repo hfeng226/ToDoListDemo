@@ -16,7 +16,6 @@
         }).then(success, error);
         
         function success(response) {
-            // vm.messages = response.data;
             vm.messages = response.data
 
         }

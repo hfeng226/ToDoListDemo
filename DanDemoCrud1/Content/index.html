@@ -8,7 +8,8 @@
     <div ng-app="DemoApp">
         <div ng-controller="DemoController as c">
         <div ng-repeat="message in c.messages">
-            {{message.Id}}: {{message.Message}}
+            {{message.Id}}: {{message.Title}}
+            {{message.Message}}
         </div>
         </div>
     </div>
