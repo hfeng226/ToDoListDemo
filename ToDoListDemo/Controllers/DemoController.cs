@@ -30,7 +30,7 @@ namespace DanDemoCrud1.Controllers
         {
             return new DemoDataService().InsertMessages(model);
         }
-        [Route, HttpPut]
+        [Route("{Id:int}"), HttpPut]
         public void UpdateMessages(UpdateMessages model)
         {
             new DemoDataService().UpdateMessages(model);

@@ -131,6 +131,7 @@
   <ItemGroup>
     <Content Include="Content\demo.js" />
     <Content Include="Content\index.html" />
+    <Content Include="Content\todo.css" />
     <Content Include="Global.asax" />
     <Content Include="Web.config" />
   </ItemGroup>
